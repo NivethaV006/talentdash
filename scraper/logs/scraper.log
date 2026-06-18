@@ -1,0 +1,216 @@
+2026-06-17 21:39:08,742 | INFO | Opening AmbitionBox
+2026-06-17 21:39:15,837 | INFO | Selecting role : Software Engineer
+2026-06-17 21:39:22,104 | INFO | 22 rows found
+2026-06-17 21:39:52,199 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(2).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:40:22,340 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(9).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:40:52,491 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(12).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:41:22,510 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(13).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:41:52,518 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(14).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:42:22,523 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(15).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:42:52,536 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(16).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:43:22,542 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(17).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:43:52,546 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(18).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:44:22,558 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(19).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:44:52,572 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(20).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:45:22,588 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(21).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:45:22,592 | INFO | Software Engineer : 10
+2026-06-17 21:45:22,592 | INFO | Selecting role : Data Analyst
+2026-06-17 21:45:29,082 | INFO | 22 rows found
+2026-06-17 21:45:59,164 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(2).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:46:29,305 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(9).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:46:59,380 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(12).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:47:29,395 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(13).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:47:59,398 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(14).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:48:29,410 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(15).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:48:59,420 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(16).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:49:29,428 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(17).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:49:59,443 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(18).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:50:29,457 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(19).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:50:59,463 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(20).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:51:29,467 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(21).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 21:51:29,476 | INFO | Data Analyst : 10
+2026-06-17 21:51:29,479 | INFO | Total Records : 20
+2026-06-17 23:10:00,241 | INFO | Opening AmbitionBox
+2026-06-17 23:10:08,280 | INFO | Selecting Software Engineer
+2026-06-17 23:10:45,690 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(2).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 23:11:15,866 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(9).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 23:11:45,960 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(12).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 23:12:15,980 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(13).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 23:12:45,990 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(14).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 23:13:16,036 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(15).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 23:14:25,214 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(16).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 23:14:55,236 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(17).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 23:15:25,244 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(18).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 23:15:55,261 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(19).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 23:16:25,285 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(20).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 23:16:55,297 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(21).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 23:16:55,298 | INFO | Selecting Data Analyst
+2026-06-17 23:17:33,137 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(2).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 23:18:03,355 | ERROR | Locator.inner_text: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator("tbody tr").nth(9).locator("[data-testid=\"salary_comparison_widget-company-name\"]")
+
+2026-06-17 23:18:24,047 | ERROR | Row 12: Locator.inner_html: Target page, context or browser has been closed
+2026-06-17 23:18:24,077 | ERROR | Row 13: Locator.inner_html: Target page, context or browser has been closed
+2026-06-17 23:18:24,218 | ERROR | Row 14: Locator.inner_html: Target page, context or browser has been closed
+2026-06-17 23:18:24,290 | ERROR | Row 15: Locator.inner_html: Target page, context or browser has been closed
+2026-06-17 23:18:24,376 | ERROR | Row 16: Locator.inner_html: Target page, context or browser has been closed
+2026-06-17 23:18:24,395 | ERROR | Row 17: Locator.inner_html: Target page, context or browser has been closed
+2026-06-17 23:18:24,409 | ERROR | Row 18: Locator.inner_html: Target page, context or browser has been closed
+2026-06-17 23:18:24,419 | ERROR | Row 19: Locator.inner_html: Target page, context or browser has been closed
+2026-06-17 23:18:24,428 | ERROR | Row 20: Locator.inner_html: Target page, context or browser has been closed
+2026-06-17 23:18:24,437 | ERROR | Row 21: Locator.inner_html: Target page, context or browser has been closed
+2026-06-17 23:18:24,441 | INFO | Saved 20 records to output\raw_records.json
+2026-06-18 08:49:32,445 | INFO | Opening AmbitionBox
+2026-06-18 08:53:41,909 | INFO | Opening AmbitionBox (Attempt 1)
+2026-06-18 08:53:49,211 | INFO | Selecting Software Engineer
+2026-06-18 08:53:55,130 | INFO | Selecting Data Analyst
+2026-06-18 08:54:00,895 | INFO | Saved 20 records to output\raw_records.json
+2026-06-18 09:15:15,377 | INFO | Opening AmbitionBox (Attempt 1)
+2026-06-18 09:15:20,426 | INFO | Opening AmbitionBox (Attempt 2)
+2026-06-18 09:15:25,482 | INFO | Opening AmbitionBox (Attempt 3)
+2026-06-18 09:15:43,933 | INFO | Opening AmbitionBox (Attempt 1)
+2026-06-18 09:15:50,614 | INFO | Selecting Software Engineer
+2026-06-18 09:15:58,823 | INFO | Selecting Data Analyst
+2026-06-18 09:16:09,277 | INFO | Saved 20 records to output\raw_records.json
+2026-06-18 10:25:16,983 | INFO | Opening AmbitionBox (Attempt 1)
+2026-06-18 10:25:26,572 | INFO | Selecting Software Engineer
+2026-06-18 10:27:45,722 | INFO | Opening AmbitionBox (Attempt 1)
+2026-06-18 10:27:55,297 | INFO | Selecting Software Engineer
+2026-06-18 10:28:00,802 | INFO | Tech Mahindra | Software Engineer
+2026-06-18 10:28:00,856 | INFO | HCLTech | Software Engineer
+2026-06-18 10:28:00,891 | INFO | TCS | Software Engineer
+2026-06-18 10:28:00,923 | INFO | Capgemini | Software Engineer
+2026-06-18 10:28:00,956 | INFO | Cognizant | Software Engineer
+2026-06-18 10:28:00,998 | INFO | Accenture | Software Engineer
+2026-06-18 10:28:01,036 | INFO | LTIMindtree | Software Engineer
+2026-06-18 10:28:01,068 | INFO | Wipro | Software Engineer
+2026-06-18 10:28:01,102 | INFO | Infosys | Software Engineer
+2026-06-18 10:28:01,140 | INFO | CGI Inc | Software Engineer
+2026-06-18 10:28:01,142 | INFO | Saved 10 records to output\raw_records.json
+2026-06-18 10:28:01,142 | INFO | Selecting Data Analyst
+2026-06-18 10:28:10,950 | INFO | TCS | Data Analyst
+2026-06-18 10:28:10,991 | INFO | Cognizant | Data Analyst
+2026-06-18 10:28:11,038 | INFO | Accenture | Data Analyst
+2026-06-18 10:28:11,070 | INFO | Wipro | Data Analyst
+2026-06-18 10:28:11,121 | INFO | S&P Global | Data Analyst
+2026-06-18 10:28:11,153 | INFO | Capgemini | Data Analyst
+2026-06-18 10:28:11,186 | INFO | Deloitte | Data Analyst
+2026-06-18 10:28:11,219 | INFO | Infosys | Data Analyst
+2026-06-18 10:28:11,251 | INFO | Tech Mahindra | Data Analyst
+2026-06-18 10:28:11,284 | INFO | HCLTech | Data Analyst
+2026-06-18 10:28:11,285 | INFO | Saved 20 records to output\raw_records.json
+2026-06-18 10:28:11,286 | INFO | Unique Companies : 12
+2026-06-18 10:28:11,286 | INFO | Total Records : 20
+2026-06-18 10:28:11,287 | INFO | Saved 20 records to output\raw_records.json
