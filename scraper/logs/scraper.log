@@ -242,3 +242,31 @@ Call log:
 2026-06-18 10:56:58,854 | INFO | Unique Companies : 12
 2026-06-18 10:56:58,855 | INFO | Total Records : 20
 2026-06-18 10:56:58,856 | INFO | Saved 20 records to output\raw_records.json
+2026-06-18 11:03:52,611 | INFO | Opening AmbitionBox (Attempt 1)
+2026-06-18 11:03:59,901 | INFO | Selecting Software Engineer
+2026-06-18 11:04:06,689 | INFO | Tech Mahindra | Software Engineer
+2026-06-18 11:04:06,723 | INFO | HCLTech | Software Engineer
+2026-06-18 11:04:06,760 | INFO | TCS | Software Engineer
+2026-06-18 11:04:06,792 | INFO | Capgemini | Software Engineer
+2026-06-18 11:04:06,821 | INFO | Cognizant | Software Engineer
+2026-06-18 11:04:06,853 | INFO | Accenture | Software Engineer
+2026-06-18 11:04:06,887 | INFO | LTIMindtree | Software Engineer
+2026-06-18 11:04:06,917 | INFO | Wipro | Software Engineer
+2026-06-18 11:04:06,954 | INFO | Infosys | Software Engineer
+2026-06-18 11:04:07,003 | INFO | CGI Inc | Software Engineer
+2026-06-18 11:04:07,005 | INFO | Saved 10 records to output\raw_records.json
+2026-06-18 11:04:07,006 | INFO | Selecting Data Analyst
+2026-06-18 11:04:14,322 | INFO | TCS | Data Analyst
+2026-06-18 11:04:14,353 | INFO | Cognizant | Data Analyst
+2026-06-18 11:04:14,385 | INFO | Accenture | Data Analyst
+2026-06-18 11:04:14,415 | INFO | Wipro | Data Analyst
+2026-06-18 11:04:14,445 | INFO | S&P Global | Data Analyst
+2026-06-18 11:04:14,476 | INFO | Capgemini | Data Analyst
+2026-06-18 11:04:14,506 | INFO | Deloitte | Data Analyst
+2026-06-18 11:04:14,535 | INFO | Infosys | Data Analyst
+2026-06-18 11:04:14,565 | INFO | Tech Mahindra | Data Analyst
+2026-06-18 11:04:14,598 | INFO | HCLTech | Data Analyst
+2026-06-18 11:04:14,599 | INFO | Saved 20 records to output\raw_records.json
+2026-06-18 11:04:14,600 | INFO | Unique Companies : 12
+2026-06-18 11:04:14,600 | INFO | Total Records : 20
+2026-06-18 11:04:14,602 | INFO | Saved 20 records to output\raw_records.json
