@@ -1,0 +1,24 @@
+{
+    "total_records_scraped": 20,
+    "records_passed_llm": 20,
+    "records_passed_validation": 20,
+    "records_rejected": {
+        "duplicates": 1,
+        "failed_insertions": 0
+    },
+    "records_stored_successfully": 19,
+    "null_rate_per_field": {
+        "company": 0.0,
+        "company_slug": 0.0,
+        "role": 0.0,
+        "level_standardized": 0.0,
+        "location": 0.0,
+        "currency": 0.0,
+        "experience_years": 0.0,
+        "base_salary": 0.0,
+        "bonus": 0.0,
+        "stock": 0.0,
+        "source": 0.0,
+        "confidence_score": 0.0
+    }
+}
