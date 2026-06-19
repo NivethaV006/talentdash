@@ -142,7 +142,7 @@ def store_record(record):
 
             record["source"],
 
-            record["confidence_score"]
+            max(0.5, record["confidence_score"])
 
         )
 
