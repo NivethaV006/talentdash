@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Salary Records</h1>
+
+<p class="mb-4">
+Live salary records processed through the TalentDash AI Pipeline.
+</p>
+
+<div class="card-custom">
+
+    <div class="row mb-4">
+
+        <div class="col-md-6">
+
+            <input
+                type="text"
+                id="searchSalary"
+                class="form-control"
+                placeholder="Search company or role..."
+                onkeyup="searchSalary()">
+
+        </div>
+
+    </div>
+
+    <table class="table align-middle" id="salaryTable">
+
+        <thead>
+
+        <tr>
+
+            <th>Company</th>
+
+            <th>Role</th>
+
+            <th>Level</th>
+
+            <th>Location</th>
+
+            <th>Base Salary</th>
+
+            <th>Total Compensation</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for row in rows %}
+
+        <tr>
+
+            <td>
+
+                <strong>{{ row[0] }}</strong>
+
+            </td>
+
+            <td>
+
+                {{ row[1] }}
+
+            </td>
+
+            <td>
+
+                {% if "SDE" in row[2] %}
+
+                    <span class="badge-success">
+
+                        {{ row[2] }}
+
+                    </span>
+
+                {% else %}
+
+                    <span class="badge-warning">
+
+                        {{ row[2] }}
+
+                    </span>
+
+                {% endif %}
+
+            </td>
+
+            <td>
+
+                {{ row[3] }}
+
+            </td>
+
+            <td>
+
+                ₹ {{ "{:,.0f}".format(row[4]) }}
+
+            </td>
+
+            <td>
+
+                <strong style="color:#008A05;">
+
+                    ₹ {{ "{:,.0f}".format(row[5]) }}
+
+                </strong>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script>
+
+function searchSalary(){
+
+    let input=document.getElementById("searchSalary").value.toLowerCase();
+
+    let rows=document.querySelectorAll("#salaryTable tbody tr");
+
+    rows.forEach(row=>{
+
+        let text=row.innerText.toLowerCase();
+
+        row.style.display=text.includes(input)?"":"none";
+
+    });
+
+}
+
+</script>
+
+{% endblock %}

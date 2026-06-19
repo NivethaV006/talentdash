@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Companies</h1>
+
+<p class="mb-4">
+Browse all companies currently available in the TalentDash salary database.
+</p>
+
+<div class="card-custom">
+
+    <div class="row mb-4">
+
+        <div class="col-md-6">
+
+            <input
+                type="text"
+                id="searchBox"
+                class="form-control"
+                placeholder="Search company..."
+                onkeyup="searchCompany()">
+
+        </div>
+
+    </div>
+
+    <table class="table align-middle" id="companyTable">
+
+        <thead>
+
+            <tr>
+
+                <th>Company ID</th>
+
+                <th>Company Name</th>
+
+                <th>Slug</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+        {% for c in companies %}
+
+            <tr>
+
+                <td>
+
+                    {{ c[0] }}
+
+                </td>
+
+                <td>
+
+                    <strong>{{ c[1] }}</strong>
+
+                </td>
+
+                <td>
+
+                    <span class="badge bg-secondary">
+
+                        {{ c[2] }}
+
+                    </span>
+
+                </td>
+
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script>
+
+function searchCompany(){
+
+    let input=document.getElementById("searchBox").value.toLowerCase();
+
+    let rows=document.querySelectorAll("#companyTable tbody tr");
+
+    rows.forEach(row=>{
+
+        let text=row.innerText.toLowerCase();
+
+        row.style.display=text.includes(input)?"":"none";
+
+    });
+
+}
+
+</script>
+
+{% endblock %}

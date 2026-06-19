@@ -1,0 +1,453 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Quality Report</h1>
+
+<p class="mb-4">
+Pipeline execution summary after data ingestion, validation, normalization and storage.
+</p>
+
+<div class="stats-row">
+
+    <div class="stat-card">
+
+        <div class="stat-value">
+
+            {{ stored }}
+
+        </div>
+
+        <div class="stat-title">
+
+            Records Stored
+
+        </div>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-value">
+
+            {{ duplicates }}
+
+        </div>
+
+        <div class="stat-title">
+
+            Duplicate Records
+
+        </div>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-value">
+
+            100%
+
+        </div>
+
+        <div class="stat-title">
+
+            Validation Success
+
+        </div>
+
+    </div>
+
+    <div class="stat-card">
+
+        <div class="stat-value">
+
+            Live
+
+        </div>
+
+        <div class="stat-title">
+
+            Neon Database
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="row">
+
+<div class="col-lg-7">
+
+<div class="card-custom">
+
+<h2>Pipeline Summary</h2>
+
+<table class="table">
+
+<thead>
+
+<tr>
+
+<th>Stage</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Web Scraping</td>
+
+<td>
+
+<span class="badge-success">
+
+Completed
+
+</span>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Gemini LLM Normalization</td>
+
+<td>
+
+<span class="badge-success">
+
+Completed
+
+</span>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Pydantic Validation</td>
+
+<td>
+
+<span class="badge-success">
+
+Completed
+
+</span>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Company Normalization</td>
+
+<td>
+
+<span class="badge-success">
+
+Completed
+
+</span>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Level Mapping</td>
+
+<td>
+
+<span class="badge-success">
+
+Completed
+
+</span>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Neon PostgreSQL Storage</td>
+
+<td>
+
+<span class="badge-success">
+
+Completed
+
+</span>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Duplicate Detection</td>
+
+<td>
+
+<span class="badge-success">
+
+Completed
+
+</span>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+<div class="col-lg-5">
+
+<div class="card-custom">
+
+<h2>Pipeline Metrics</h2>
+
+<br>
+
+<table class="table">
+
+<tbody>
+
+<tr>
+
+<td>Total Stored Records</td>
+
+<td><strong>{{ stored }}</strong></td>
+
+</tr>
+
+<tr>
+
+<td>Duplicate Records</td>
+
+<td>
+
+<span class="badge-warning">
+
+{{ duplicates }}
+
+</span>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Verified Records</td>
+
+<td>
+
+<span class="badge-success">
+
+{{ stored - duplicates }}
+
+</span>
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Rejected Records</td>
+
+<td>
+
+0
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Storage Engine</td>
+
+<td>
+
+Neon PostgreSQL
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>Pipeline Status</td>
+
+<td>
+
+<span class="badge-success">
+
+Healthy
+
+</span>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="card-custom mt-4">
+
+<h2>Architecture Overview</h2>
+
+<br>
+
+<div class="pipeline">
+
+<div class="pipeline-step">
+
+<div class="pipeline-circle">
+
+🕷
+
+</div>
+
+<strong>Scraper</strong>
+
+</div>
+
+<div class="pipeline-line"></div>
+
+<div class="pipeline-step">
+
+<div class="pipeline-circle">
+
+🤖
+
+</div>
+
+<strong>LLM</strong>
+
+</div>
+
+<div class="pipeline-line"></div>
+
+<div class="pipeline-step">
+
+<div class="pipeline-circle">
+
+✔
+
+</div>
+
+<strong>Validation</strong>
+
+</div>
+
+<div class="pipeline-line"></div>
+
+<div class="pipeline-step">
+
+<div class="pipeline-circle">
+
+🏢
+
+</div>
+
+<strong>Normalize</strong>
+
+</div>
+
+<div class="pipeline-line"></div>
+
+<div class="pipeline-step">
+
+<div class="pipeline-circle">
+
+📈
+
+</div>
+
+<strong>Levels</strong>
+
+</div>
+
+<div class="pipeline-line"></div>
+
+<div class="pipeline-step">
+
+<div class="pipeline-circle">
+
+🗄
+
+</div>
+
+<strong>Storage</strong>
+
+</div>
+
+<div class="pipeline-line"></div>
+
+<div class="pipeline-step">
+
+<div class="pipeline-circle">
+
+♻
+
+</div>
+
+<strong>Dedupe</strong>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card-custom mt-4">
+
+<h2>About this Pipeline</h2>
+
+<p>
+
+TalentDash is an AI-powered salary data engineering pipeline that continuously
+collects salary information from public sources, normalizes the data using
+Gemini LLM, validates every field with Pydantic, standardizes company names
+and job levels, stores verified records in Neon PostgreSQL, and removes
+duplicate salary submissions before making them available through the
+dashboard.
+
+</p>
+
+</div>
+
+{% endblock %}
