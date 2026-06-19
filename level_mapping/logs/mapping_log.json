@@ -1,0 +1,142 @@
+[
+    {
+        "role": "Software Engineer",
+        "experience": 3.5,
+        "mapped_level": "SDE-II",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Software Engineer",
+        "experience": 2.5,
+        "mapped_level": "SDE-II",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Software Engineer",
+        "experience": 4.0,
+        "mapped_level": "SDE-II",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Software Engineer",
+        "experience": 2.5,
+        "mapped_level": "SDE-II",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Software Engineer",
+        "experience": 3.5,
+        "mapped_level": "SDE-II",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Software Engineer",
+        "experience": 3.5,
+        "mapped_level": "SDE-II",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Software Engineer",
+        "experience": 2.5,
+        "mapped_level": "SDE-II",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Software Engineer",
+        "experience": 3.5,
+        "mapped_level": "SDE-II",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Software Engineer",
+        "experience": 3.0,
+        "mapped_level": "SDE-II",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Software Engineer",
+        "experience": 3.5,
+        "mapped_level": "SDE-II",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Data Analyst",
+        "experience": 3.5,
+        "mapped_level": "L4",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Data Analyst",
+        "experience": 4.5,
+        "mapped_level": "L4",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Data Analyst",
+        "experience": 3.5,
+        "mapped_level": "L4",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Data Analyst",
+        "experience": 2.5,
+        "mapped_level": "L4",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Data Analyst",
+        "experience": 3.0,
+        "mapped_level": "L4",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Data Analyst",
+        "experience": 2.5,
+        "mapped_level": "L4",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Data Analyst",
+        "experience": 2.5,
+        "mapped_level": "L4",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Data Analyst",
+        "experience": 3.0,
+        "mapped_level": "L4",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Data Analyst",
+        "experience": 3.0,
+        "mapped_level": "L4",
+        "confidence": 0.9,
+        "method": "RULE"
+    },
+    {
+        "role": "Data Analyst",
+        "experience": 2.5,
+        "mapped_level": "L4",
+        "confidence": 0.9,
+        "method": "RULE"
+    }
+]
