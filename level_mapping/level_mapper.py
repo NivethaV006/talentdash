@@ -1,13 +1,7 @@
 from level_rules import LEVEL_RULES
-
+from llm_fallback import llm_classify
 # Future Gemini fallback
-def llm_classify(role, experience):
 
-    return {
-        "level": "Unknown",
-        "confidence": 0.40,
-        "method": "LLM_FALLBACK"
-    }
 
 
 def map_level(role, experience):
