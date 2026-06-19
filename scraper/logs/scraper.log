@@ -270,3 +270,5 @@ Call log:
 2026-06-18 11:04:14,600 | INFO | Unique Companies : 12
 2026-06-18 11:04:14,600 | INFO | Total Records : 20
 2026-06-18 11:04:14,602 | INFO | Saved 20 records to output\raw_records.json
+2026-06-19 14:17:22,322 | INFO | Opening AmbitionBox (Attempt 1)
+2026-06-19 14:17:33,102 | INFO | Selecting Software Engineer
