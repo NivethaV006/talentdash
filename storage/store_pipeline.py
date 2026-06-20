@@ -1,22 +1,28 @@
 import json
+from pathlib import Path
 
 from storage import store_record
 from quality_report import generate_quality_report
 
+# ---------------------------------------
+# Base Directory
+# ---------------------------------------
 
-INPUT_FILE = "../level_mapping/output/mapped_records.json"
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# ---------------------------------------
+# Files
+# ---------------------------------------
+
+INPUT_FILE = BASE_DIR / "level_mapping" / "output" / "mapped_records.json"
 
 
 def load():
 
     with open(
-
         INPUT_FILE,
-
         "r",
-
         encoding="utf-8"
-
     ) as f:
 
         return json.load(f)
@@ -31,20 +37,12 @@ def calculate_null_rate(records):
     for key in records[0]:
 
         nulls = sum(
-
             1
-
             for r in records
-
             if r.get(key) is None
-
         )
 
-        result[key] = (
-
-            nulls / total
-
-        ) * 100
+        result[key] = (nulls / total) * 100
 
     return result
 
@@ -73,8 +71,8 @@ def main():
 
         "failed": 0,
 
-        "null_rate":
-            calculate_null_rate(records)
+        "null_rate": calculate_null_rate(records)
+
     }
 
     for record in records:

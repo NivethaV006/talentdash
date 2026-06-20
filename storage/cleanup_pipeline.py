@@ -1,18 +1,24 @@
 from duplicate_cleanup import deduplicate_existing_records
 
 
-print()
+def main():
 
-print("=" * 45)
-print("TalentDash Duplicate Cleanup")
-print("=" * 45)
+    print()
 
-duplicates = deduplicate_existing_records()
+    print("=" * 45)
+    print("TalentDash Duplicate Cleanup")
+    print("=" * 45)
 
-print()
+    duplicates = deduplicate_existing_records()
 
-print(f"Duplicate Records Flagged : {duplicates}")
+    print()
 
-print()
+    print(f"Duplicate Records Flagged : {duplicates}")
 
-print("Cleanup Completed.")
+    print()
+
+    print("Cleanup Completed.")
+
+
+if __name__ == "__main__":
+    main()

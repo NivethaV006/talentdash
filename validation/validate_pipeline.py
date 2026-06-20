@@ -6,11 +6,21 @@ from validator import (
     save_rejections
 )
 
-INPUT_FILE = "../llm/output/normalized_records.json"
+# ---------------------------------------
+# Base Directory
+# ---------------------------------------
 
-VALIDATED_OUTPUT = "output/validated_records.json"
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-REJECTION_OUTPUT = "logs/rejections.jsonl"
+# ---------------------------------------
+# Files
+# ---------------------------------------
+
+INPUT_FILE = BASE_DIR / "llm" / "output" / "normalized_records.json"
+
+VALIDATED_OUTPUT = BASE_DIR / "validation" / "output" / "validated_records.json"
+
+REJECTION_OUTPUT = BASE_DIR / "validation" / "logs" / "rejections.jsonl"
 
 
 def load_records():
@@ -26,9 +36,7 @@ def load_records():
 
 def save_validated(records):
 
-    Path(
-        VALIDATED_OUTPUT
-    ).parent.mkdir(
+    VALIDATED_OUTPUT.parent.mkdir(
         parents=True,
         exist_ok=True
     )

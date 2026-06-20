@@ -10,18 +10,24 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ---------------------------------------
+# Base Directory
+# ---------------------------------------
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# ---------------------------------------
 # Input / Output Files
 # ---------------------------------------
 
-RAW_INPUT_FILE = Path("../scraper/output/raw_records.json")
+RAW_INPUT_FILE = BASE_DIR / "scraper" / "output" / "raw_records.json"
 
-OUTPUT_FILE = Path("output/normalized_records.json")
+OUTPUT_FILE = BASE_DIR / "llm" / "output" / "normalized_records.json"
 
 # ---------------------------------------
 # Logging
 # ---------------------------------------
 
-LOG_DIR = Path("logs")
+LOG_DIR = BASE_DIR / "llm" / "logs"
 
 PROMPT_LOG = LOG_DIR / "first_prompt.txt"
 
@@ -33,7 +39,7 @@ MALFORMED_LOG = LOG_DIR / "malformed_records.jsonl"
 # Output Directories
 # ---------------------------------------
 
-OUTPUT_DIR = Path("output")
+OUTPUT_DIR = BASE_DIR / "llm" / "output"
 
 OUTPUT_DIR.mkdir(
     parents=True,

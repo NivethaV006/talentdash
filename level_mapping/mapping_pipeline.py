@@ -3,12 +3,21 @@ from pathlib import Path
 
 from level_mapper import map_level
 
+# ---------------------------------------
+# Base Directory
+# ---------------------------------------
 
-INPUT_FILE = "../company_normalization/output/normalized_companies.json"
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-OUTPUT_FILE = "output/mapped_records.json"
+# ---------------------------------------
+# Files
+# ---------------------------------------
 
-LOG_FILE = "logs/mapping_log.json"
+INPUT_FILE = BASE_DIR / "company_normalization" / "output" / "normalized_companies.json"
+
+OUTPUT_FILE = BASE_DIR / "level_mapping" / "output" / "mapped_records.json"
+
+LOG_FILE = BASE_DIR / "level_mapping" / "logs" / "mapping_log.json"
 
 
 def load():
@@ -24,7 +33,8 @@ def load():
 
 def save(records):
 
-    Path("output").mkdir(
+    OUTPUT_FILE.parent.mkdir(
+        parents=True,
         exist_ok=True
     )
 
@@ -44,7 +54,8 @@ def save(records):
 
 def save_log(logs):
 
-    Path("logs").mkdir(
+    LOG_FILE.parent.mkdir(
+        parents=True,
         exist_ok=True
     )
 
@@ -79,9 +90,9 @@ def main():
     for record in records:
 
         result = map_level(
-        record["role"],
-        record["experience_years"]
-    )
+            record["role"],
+            record["experience_years"]
+        )
 
         record["level_standardized"] = result["level"]
 
@@ -89,16 +100,16 @@ def main():
 
         logs.append({
 
-        "role": record["role"],
+            "role": record["role"],
 
-        "experience": record["experience_years"],
+            "experience": record["experience_years"],
 
-        "mapped_level": result["level"],
+            "mapped_level": result["level"],
 
-        "confidence": result["confidence"],
+            "confidence": result["confidence"],
 
-        "method": result["method"]
-    })
+            "method": result["method"]
+        })
 
     save(records)
 

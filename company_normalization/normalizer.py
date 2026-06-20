@@ -2,7 +2,13 @@ import json
 import re
 from pathlib import Path
 
-ALIAS_FILE = "aliases.json"
+# ---------------------------------------
+# Base Directory
+# ---------------------------------------
+
+BASE_DIR = Path(__file__).resolve().parent
+
+ALIAS_FILE = BASE_DIR / "aliases.json"
 
 with open(ALIAS_FILE, "r", encoding="utf-8") as f:
     ALIASES = json.load(f)

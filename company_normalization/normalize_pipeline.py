@@ -3,12 +3,21 @@ from pathlib import Path
 
 from normalizer import normalize_company
 
+# ---------------------------------------
+# Base Directory
+# ---------------------------------------
 
-INPUT_FILE = "../validation/output/validated_records.json"
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-OUTPUT_FILE = "output/normalized_companies.json"
+# ---------------------------------------
+# Files
+# ---------------------------------------
 
-LOG_FILE = "logs/normalization_log.json"
+INPUT_FILE = BASE_DIR / "validation" / "output" / "validated_records.json"
+
+OUTPUT_FILE = BASE_DIR / "company_normalization" / "output" / "normalized_companies.json"
+
+LOG_FILE = BASE_DIR / "company_normalization" / "logs" / "normalization_log.json"
 
 
 def load():
@@ -24,7 +33,8 @@ def load():
 
 def save(records):
 
-    Path("output").mkdir(
+    OUTPUT_FILE.parent.mkdir(
+        parents=True,
         exist_ok=True
     )
 
@@ -44,7 +54,8 @@ def save(records):
 
 def save_log(logs):
 
-    Path("logs").mkdir(
+    LOG_FILE.parent.mkdir(
+        parents=True,
         exist_ok=True
     )
 

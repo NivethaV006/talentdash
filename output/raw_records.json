@@ -1,0 +1,162 @@
+[
+    {
+        "raw_company": "Tech Mahindra",
+        "raw_role": "Software Engineer",
+        "raw_salary_text": "₹4.9 L/yr - ₹5.5 L/yr",
+        "raw_location": "India",
+        "raw_experience": "1 - 6 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/tech-mahindra-salaries/software-engineer"
+    },
+    {
+        "raw_company": "HCLTech",
+        "raw_role": "Software Engineer",
+        "raw_salary_text": "₹4.6 L/yr - ₹5 L/yr",
+        "raw_location": "India",
+        "raw_experience": "0 - 5 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/hcl-technologies-salaries/software-engineer"
+    },
+    {
+        "raw_company": "TCS",
+        "raw_role": "Software Engineer",
+        "raw_salary_text": "₹7 L/yr - ₹7.7 L/yr",
+        "raw_location": "India",
+        "raw_experience": "1 - 7 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/tcs-salaries/software-engineer"
+    },
+    {
+        "raw_company": "Capgemini",
+        "raw_role": "Software Engineer",
+        "raw_salary_text": "₹5 L/yr - ₹5.5 L/yr",
+        "raw_location": "India",
+        "raw_experience": "0 - 5 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/capgemini-salaries/software-engineer"
+    },
+    {
+        "raw_company": "Cognizant",
+        "raw_role": "Software Engineer",
+        "raw_salary_text": "₹6.8 L/yr - ₹7.5 L/yr",
+        "raw_location": "India",
+        "raw_experience": "1 - 6 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/cognizant-salaries/software-engineer"
+    },
+    {
+        "raw_company": "LTIMindtree",
+        "raw_role": "Software Engineer",
+        "raw_salary_text": "₹4.9 L/yr - ₹5.4 L/yr",
+        "raw_location": "India",
+        "raw_experience": "0 - 5 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/ltimindtree-salaries/software-engineer"
+    },
+    {
+        "raw_company": "Accenture",
+        "raw_role": "Software Engineer",
+        "raw_salary_text": "₹8 L/yr - ₹8.8 L/yr",
+        "raw_location": "India",
+        "raw_experience": "1 - 6 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/accenture-salaries/software-engineer"
+    },
+    {
+        "raw_company": "Wipro",
+        "raw_role": "Software Engineer",
+        "raw_salary_text": "₹7.2 L/yr - ₹7.9 L/yr",
+        "raw_location": "India",
+        "raw_experience": "1 - 6 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/wipro-salaries/software-engineer"
+    },
+    {
+        "raw_company": "Infosys",
+        "raw_role": "Software Engineer",
+        "raw_salary_text": "₹11 L/yr - ₹12.2 L/yr",
+        "raw_location": "India",
+        "raw_experience": "1 - 5 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/infosys-salaries/software-engineer"
+    },
+    {
+        "raw_company": "CGI Inc",
+        "raw_role": "Software Engineer",
+        "raw_salary_text": "₹7.1 L/yr - ₹7.8 L/yr",
+        "raw_location": "India",
+        "raw_experience": "1 - 6 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/cgi-inc-salaries/software-engineer"
+    },
+    {
+        "raw_company": "TCS",
+        "raw_role": "Data Analyst",
+        "raw_salary_text": "₹5.1 L/yr - ₹5.7 L/yr",
+        "raw_location": "India",
+        "raw_experience": "1 - 6 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/tcs-salaries/data-analyst"
+    },
+    {
+        "raw_company": "Accenture",
+        "raw_role": "Data Analyst",
+        "raw_salary_text": "₹6.9 L/yr - ₹7.6 L/yr",
+        "raw_location": "India",
+        "raw_experience": "0 - 6 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/accenture-salaries/data-analyst"
+    },
+    {
+        "raw_company": "Cognizant",
+        "raw_role": "Data Analyst",
+        "raw_salary_text": "₹6.1 L/yr - ₹6.7 L/yr",
+        "raw_location": "India",
+        "raw_experience": "1 - 8 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/cognizant-salaries/data-analyst"
+    },
+    {
+        "raw_company": "Wipro",
+        "raw_role": "Data Analyst",
+        "raw_salary_text": "₹4.9 L/yr - ₹5.5 L/yr",
+        "raw_location": "India",
+        "raw_experience": "0 - 5 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/wipro-salaries/data-analyst"
+    },
+    {
+        "raw_company": "Capgemini",
+        "raw_role": "Data Analyst",
+        "raw_salary_text": "₹4.9 L/yr - ₹5.4 L/yr",
+        "raw_location": "India",
+        "raw_experience": "0 - 5 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/capgemini-salaries/data-analyst"
+    },
+    {
+        "raw_company": "S&P Global",
+        "raw_role": "Data Analyst",
+        "raw_salary_text": "₹5.2 L/yr - ₹5.8 L/yr",
+        "raw_location": "India",
+        "raw_experience": "0 - 6 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/s-and-p-global-salaries/data-analyst"
+    },
+    {
+        "raw_company": "Deloitte",
+        "raw_role": "Data Analyst",
+        "raw_salary_text": "₹7.7 L/yr - ₹8.5 L/yr",
+        "raw_location": "India",
+        "raw_experience": "0 - 5 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/deloitte-salaries/data-analyst"
+    },
+    {
+        "raw_company": "Infosys",
+        "raw_role": "Data Analyst",
+        "raw_salary_text": "₹5 L/yr - ₹5.5 L/yr",
+        "raw_location": "India",
+        "raw_experience": "0 - 6 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/infosys-salaries/data-analyst"
+    },
+    {
+        "raw_company": "HCLTech",
+        "raw_role": "Data Analyst",
+        "raw_salary_text": "₹5.1 L/yr - ₹5.7 L/yr",
+        "raw_location": "India",
+        "raw_experience": "0 - 6 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/hcl-technologies-salaries/data-analyst"
+    },
+    {
+        "raw_company": "Tech Mahindra",
+        "raw_role": "Data Analyst",
+        "raw_salary_text": "₹4.8 L/yr - ₹5.3 L/yr",
+        "raw_location": "India",
+        "raw_experience": "0 - 6 years exp.",
+        "company_url": "https://www.ambitionbox.com/salaries/tech-mahindra-salaries/data-analyst"
+    }
+]

@@ -5,9 +5,18 @@ from db import get_connection
 from company_repository import get_or_create_company
 from deduplicator import is_duplicate
 
+# ---------------------------------------
+# Base Directory
+# ---------------------------------------
 
-LOG_DIR = Path("logs")
-LOG_DIR.mkdir(exist_ok=True)
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+LOG_DIR = BASE_DIR / "storage" / "logs"
+
+LOG_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
 
 def write_log(filename, data):

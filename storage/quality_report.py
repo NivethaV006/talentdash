@@ -1,8 +1,18 @@
 import json
 from pathlib import Path
 
-OUTPUT_DIR = Path("output")
-OUTPUT_DIR.mkdir(exist_ok=True)
+# ---------------------------------------
+# Base Directory
+# ---------------------------------------
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+OUTPUT_DIR = BASE_DIR / "storage" / "output"
+
+OUTPUT_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
 
 
 def generate_quality_report(stats):
