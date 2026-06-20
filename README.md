@@ -2,52 +2,69 @@
 
 ## Overview
 
-TalentDash is an AI-powered salary data engineering pipeline that collects raw salary information, normalizes it using Google's Gemini LLM, validates every record using Pydantic, standardizes company names and job levels, detects duplicate entries, and stores clean salary data into a Neon PostgreSQL database. A Flask dashboard is provided to visualize the processed data and quality metrics.
+TalentDash is an end-to-end AI-powered salary data engineering pipeline that collects salary information from AmbitionBox, normalizes raw data using Google's Gemini LLM, validates every record with Pydantic, standardizes company names and job levels, detects duplicate records, stores clean data in a Neon PostgreSQL database, and visualizes processed information through a Flask dashboard.
+
+The project demonstrates a complete ETL workflow suitable for modern AI Data Engineering applications.
+
+---
+
+# Live Deployment
+
+**GitHub Repository**
+
+https://github.com/NivethaV006/talentdash
+
+**Live Dashboard (Render)**
+
+https://talentdash-nwck.onrender.com/
 
 ---
 
 # Important Note
 
-### Why only 20 salary records?
+## Why only 20 salary records?
 
 The project intentionally processes **20 salary records** for demonstration purposes.
 
-**Reason 1:** The objective of this assessment is to demonstrate the complete end-to-end data engineering pipeline (scraping → LLM normalization → validation → storage → deduplication) rather than building a large dataset.
+**Reason 1:** AmbitionBox uses pagination and anti-bot protection, making unrestricted automated scraping impractical for repeated execution.
 
-**Reason 2:** A smaller dataset keeps the pipeline reproducible, reduces unnecessary Gemini API usage, and allows every stage of the pipeline to be easily verified during evaluation.
+**Reason 2:** Twenty records are sufficient to demonstrate every stage of the pipeline (scraping, normalization, validation, storage, deduplication, and reporting) while keeping Gemini API usage low and pipeline execution fast.
 
-The pipeline is scalable and can process a much larger dataset by increasing the scraper configuration.
+The architecture is fully scalable and can process much larger datasets by increasing the scraper configuration.
 
 ---
 
 # Architecture
 
 ```
-Raw Salary Data
-        │
-        ▼
-Web Scraper
-        │
-        ▼
-Gemini LLM Normalization
-        │
-        ▼
-Pydantic Validation
-        │
-        ▼
-Company Normalization
-        │
-        ▼
-Level Mapping
-        │
-        ▼
-Neon PostgreSQL Storage
-        │
-        ▼
-Duplicate Detection
-        │
-        ▼
-Flask Dashboard
+                   AmbitionBox
+                        │
+                        ▼
+               Playwright Scraper
+                        │
+                        ▼
+              Raw JSON Salary Records
+                        │
+                        ▼
+         Gemini LLM Data Normalization
+                        │
+                        ▼
+           Pydantic Schema Validation
+                        │
+                        ▼
+        Company Name Normalization
+                        │
+                        ▼
+      Standardized Level Mapping
+                        │
+                        ▼
+        Duplicate Detection (48 hrs)
+                        │
+                        ▼
+         Neon PostgreSQL Database
+                        │
+                        ▼
+              Flask Dashboard
 ```
 
 ---
@@ -63,6 +80,7 @@ Flask Dashboard
 * Flask
 * Bootstrap
 * Git & GitHub
+* Render
 
 ---
 
@@ -71,6 +89,7 @@ Flask Dashboard
 ```
 talentdash/
 
+│
 ├── scraper/
 ├── llm/
 ├── validation/
@@ -78,9 +97,10 @@ talentdash/
 ├── level_mapping/
 ├── storage/
 ├── dashboard/
-
+│
 ├── requirements.txt
 ├── .env.example
+├── render.yaml
 ├── README.md
 ```
 
@@ -90,40 +110,42 @@ talentdash/
 
 ## A1 – Salary Scraper
 
-* Scrapes salary information from AmbitionBox.
-* Extracts company, role, salary, experience, and location.
-* Stores raw records in JSON format.
+* Scrapes salary information from AmbitionBox
+* Extracts company, role, salary, experience and location
+* Stores raw records as JSON
 
 ---
 
 ## A2 – LLM Normalization
 
-Uses Gemini to convert raw scraped information into a standardized JSON schema.
+Google Gemini converts raw salary information into a standardized JSON schema.
 
 Normalized fields include:
 
 * Company
 * Role
-* Salary
-* Experience
-* Currency
 * Location
+* Currency
+* Experience
+* Salary
+* Bonus
+* Stock
 
 ---
 
 ## A3 – Pydantic Validation
 
-Every normalized record is validated against a predefined schema.
+Each normalized record is validated using Pydantic.
 
-* Invalid records are rejected.
-* Rejection reasons are logged.
-* Valid records proceed to the next stage.
+* Rejects malformed records
+* Logs validation failures
+* Allows only valid records into the pipeline
 
 ---
 
 ## A4 – Company Normalization
 
-Maps company aliases to a single standardized company.
+Maps multiple company aliases into one standardized company.
 
 Example
 
@@ -141,18 +163,21 @@ company_slug = google
 
 ## A5 – Level Mapping
 
-Maps job titles and experience into standardized levels using rule-based logic with Gemini LLM fallback for ambiguous cases.
+Maps job titles and years of experience into standardized engineering levels using rule-based logic with Gemini fallback.
 
 Example
 
 ```
 Software Engineer
+
 ↓
 
 SDE-I
+
 ↓
 
 SDE-II
+
 ↓
 
 Senior SDE
@@ -162,36 +187,34 @@ Senior SDE
 
 ## A6 – Storage & Quality Report
 
-Validated records are stored in Neon PostgreSQL.
+Stores validated records into Neon PostgreSQL.
 
-The pipeline generates a quality report containing:
+Automatically generates:
 
 * Total records scraped
-* Records passed LLM normalization
-* Records passed validation
-* Records rejected
-* Records stored successfully
+* Records normalized
+* Records validated
+* Rejected records
+* Successfully stored records
 * Null rate per field
 
 ---
 
-## A7 – Deduplication
+## A7 – Duplicate Detection
 
-Before inserting a salary record:
+Before insertion, the pipeline checks:
 
-* Checks company
+* Company
 * Role
 * Level
 * Location
 * Salary
 
-Records submitted within **48 hours** having salary differences within **10%** are skipped.
-
-A cleanup utility is also provided to identify duplicate records already stored in the database.
+Records submitted within **48 hours** having salary differences within **10%** are treated as duplicates and skipped.
 
 ---
 
-# Database
+# Database Schema
 
 ## companies
 
@@ -221,7 +244,7 @@ A cleanup utility is also provided to identify duplicate records already stored 
 
 # Environment Variables
 
-Create a `.env` file.
+Create a `.env` file in the project root.
 
 ```
 DATABASE_URL=your_neon_database_url
@@ -234,29 +257,31 @@ GEMINI_API_KEY=your_gemini_api_key
 
 Clone the repository
 
-```
+```bash
 git clone https://github.com/NivethaV006/talentdash.git
+
+cd talentdash
 ```
 
 Install dependencies
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
-Install Playwright browser
+Install Playwright browser (required only for running the scraper locally)
 
-```
-playwright install
+```bash
+python -m playwright install chromium
 ```
 
 ---
 
 # Database Setup
 
-Create database tables
+Create the database tables
 
-```
+```bash
 python storage/create_table.py
 ```
 
@@ -264,9 +289,9 @@ python storage/create_table.py
 
 # Running the Pipeline
 
-Run the following modules in order:
+Execute the pipeline modules in order:
 
-```
+```bash
 python scraper/scraper.py
 
 python llm/pipeline.py
@@ -286,7 +311,9 @@ python storage/cleanup_pipeline.py
 
 # Running the Dashboard
 
-```
+Local
+
+```bash
 cd dashboard
 
 python app.py
@@ -296,6 +323,12 @@ Open
 
 ```
 http://localhost:5000
+```
+
+Production
+
+```
+https://YOUR-RENDER-URL.onrender.com
 ```
 
 ---
@@ -320,16 +353,16 @@ Location : India
 
 ```json
 {
-  "company": "tech mahindra",
-  "company_slug": "tech-mahindra",
-  "role": "Software Engineer",
-  "level_standardized": "SDE-II",
-  "location": "India",
-  "currency": "INR",
-  "experience_years": 3.5,
-  "base_salary": 515000,
-  "bonus": 0,
-  "stock": 0
+    "company": "tech mahindra",
+    "company_slug": "tech-mahindra",
+    "role": "Software Engineer",
+    "level_standardized": "SDE-II",
+    "location": "India",
+    "currency": "INR",
+    "experience_years": 3.5,
+    "base_salary": 515000,
+    "bonus": 0,
+    "stock": 0
 }
 ```
 
@@ -339,9 +372,9 @@ Location : India
 
 ### Example 1
 
-```
+```json
 {
-  "company":"Google"
+    "company": "Google"
 }
 ```
 
@@ -351,11 +384,13 @@ Reason
 Missing required field: role
 ```
 
+---
+
 ### Example 2
 
-```
+```json
 {
-  "salary":"abc"
+    "salary": "abc"
 }
 ```
 
@@ -395,33 +430,27 @@ stock                   0.00%
 
 # Challenges Faced
 
-The most challenging part of the project was integrating multiple independent pipeline stages while maintaining consistent data flow across scraping, normalization, validation, storage, and deduplication. Careful coordination was required to ensure that each stage consumed and produced data in a compatible format.
+* Designing a modular ETL pipeline where every stage consumes and produces standardized JSON.
+* Maintaining consistent data flow across scraping, LLM normalization, validation, storage, and reporting.
+* Handling company alias normalization and duplicate salary detection while preserving data quality.
 
 ---
 
 # Hardest Decision
 
-The hardest design decision was implementing **rule-based level mapping with Gemini LLM as a fallback** instead of using the LLM for every record.
+The most important design decision was using **rule-based level mapping with Gemini LLM as a fallback** instead of using the LLM for every record.
 
-This approach reduced API usage, improved execution speed, and ensured deterministic results for common job titles while still allowing ambiguous cases to be classified intelligently.
-
----
-
-# Deployment Status
-
-The application was successfully tested locally with Neon PostgreSQL and the Flask dashboard.
-
-Deployment to Render was initiated, but package import restructuring is still required for production deployment. The complete pipeline, dashboard, and database integration function correctly in the local development environment.
+This approach reduced API cost, improved execution speed, and produced deterministic results for common engineering roles while still handling ambiguous cases intelligently.
 
 ---
 
 # Future Improvements
 
-* Schedule automatic scraping using cron jobs.
-* Containerize the application using Docker.
-* Expand support to additional salary sources.
+* Automate scraping using scheduled jobs.
+* Dockerize the complete application.
+* Support additional salary data sources.
 * Improve company alias matching using semantic similarity.
-* Deploy the complete application to a production cloud environment.
+* Add historical salary trend analysis.
 
 ---
 
@@ -429,5 +458,4 @@ Deployment to Render was initiated, but package import restructuring is still re
 
 **Nivetha V**
 
-
-TalentDash – AI Data Engineering Internship Project
+AI Data Engineering Internship Project
